@@ -17,17 +17,11 @@
 {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
 {{ $avatar_shape := site.Params.avatar.shape | default "circle" }}
 
-<style>
-.vertical-center {
-  margin: 0;
-  position: relative;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-</style>
-
 <!-- About widget -->
+<div>
+  <a class="background-img" href="#img1"><img id="img1" src="img/mountains.jpg" /></a>
+</div>
+  
 <div class="row">
   <div class="col-12 col-lg-4">
     <div id="profile">
@@ -87,6 +81,7 @@
 
     <div class="article-style">
       {{ $person_page.Content }}
+      <a class="btn btn-outline-primary btn-page-header" href="/files/cv.pdf" target="_blank" rel="noopener">DOWNLOAD CV</a>
     </div>
 
     <div class="row">

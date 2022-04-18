@@ -57,7 +57,8 @@
   @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
-
+  text-transform: uppercase;
+  font-weight: 300; // MC was here
   @include hover-focus() {
     text-decoration: none;
   }

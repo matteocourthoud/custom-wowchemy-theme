@@ -5,14 +5,32 @@
 /* Based on Bootstrap's `table-responsive` style. */
 table {
   display: block;
-  width: 100%;
-  overflow-x: scroll;
+  width: fit-content;
+  overflow-x: auto;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 1rem;
   font-size: 0.8rem;
   // Override `article-style`'s `break-word` wrapping to make wide tables scrollable.
-  overflow-wrap: normal;
   word-wrap: normal;
   word-break: normal;
+  border-radius: 5px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-color: #ffffff00;
+}
+
+
+
+
+table > thead {
+  background-color: $sta-primary;
+  color: white;
+  text-align: center;
+}
+
+table > thead >th {
+  text-align: center;
 }
 
 table > thead > tr > th,
@@ -25,11 +43,6 @@ table > tfoot > tr > td {
   line-height: 1.43;
   vertical-align: top;
   border-top: 1px solid #ddd;
-}
-
-table > thead > tr > th {
-  vertical-align: bottom;
-  border-bottom: 2px solid #ddd;
 }
 
 table > caption + thead > tr:first-child > th,
@@ -59,4 +72,18 @@ table > tbody > tr:nth-child(odd) > th {
 table > tbody > tr:hover > td,
 table > tbody > tr:hover > th {
   background-color: #e5e5e5;
+}
+
+/* Round borders */
+table > thead > tr:first-child > th:first-child {
+    border-radius: 5px 0 0 0;
+}
+table > thead > tr:first-child > th:last-child {
+    border-radius: 0 5px 0 0;
+}
+table > tbody > tr:last-child > td:first-child {
+    border-radius: 0 0 0 5px;
+}
+table > tbody > tr:last-child > td:last-child {
+    border-radius: 0 0 5px 0;
 }

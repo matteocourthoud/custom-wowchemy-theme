@@ -159,12 +159,13 @@ h1 {
   font-size: 2.25rem;
 }
 h2 {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
   font-size: 1.5rem;
 }
 h3 {
-  font-weight: 700;
   margin-top: 1.5rem;
+  font-weight: 700;
   font-size: 1.25rem;
 }
 h4,
@@ -211,13 +212,25 @@ pre {
 
   /* Match bg of default highlight theme. */
   border-color: rgb(248, 248, 248);
-  font-size: 0.7rem;
-  border-radius: 4px;
+  font-size: 0.6rem;
+
+  border-style: solid;
+  border-color: $gray-500;
+  border-radius: .5em;
+  border-width: thin;
 }
 
 pre code {
   white-space: pre; /* Override Bootstrap to preserve line breaks in code. */
   overflow-x: auto;
+}
+
+.hljs.shell {
+  background-color: white !important;
+}
+
+.hljs.apache {
+  background-color: white !important;
 }
 
 hr {
@@ -280,4 +293,8 @@ small,
 
 .responsive-wrap iframe {
   max-width: 100%;
+}
+
+p img {
+  max-height: 45vh !important;
 }

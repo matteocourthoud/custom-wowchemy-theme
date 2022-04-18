@@ -40,7 +40,7 @@
 
   <div class="page-footer">
     {{/* Docs and Updates layouts include the site footer in a different location. */}}
-    {{ if not (in (slice "book" "docs" "updates") .Type) }}
+    {{ if not (in (slice "book" "docs" "updates" "cv") .Type) }}
     <div class="container">
       {{ partial "site_footer" . }}
     </div>

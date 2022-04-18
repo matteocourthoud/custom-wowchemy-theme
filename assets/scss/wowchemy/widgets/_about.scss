@@ -2,6 +2,30 @@
  *  About widget
  **************************************************/
 
+.wg-about {
+  @media screen and (min-width: 768px) {
+    height: 100vh;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    margin-bottom: -70px;
+  }
+}
+
+.wg-about .background-img {
+  position: absolute;
+  bottom: 0px;
+  @media screen and (min-width: 768px) {
+    bottom: 70px;
+  }
+}
+
+.wg-about .container {
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 200px;
+  }
+}
+
 #profile {
   text-align: center;
   padding: 30px 10px;

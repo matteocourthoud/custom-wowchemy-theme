@@ -4,6 +4,7 @@
 
 .docs-article-container {
   max-width: 760px;
+  margin: 0 auto;
 }
 
 /* Documentation: article footer. */
@@ -21,6 +22,7 @@
 .docs-content {
   order: 1;
   position: relative;
+  font-size: 80%;
 }
 
 .docs-content > h2[id],
@@ -57,7 +59,6 @@
 
 .docs-sidebar {
   order: 0;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
 @media (min-width: 768px) {
@@ -240,6 +241,10 @@ ul.toc-top {
   display: block;
 }
 
+#TableOfContents li ul li a{
+  display: none;
+}
+
 #TableOfContents li a,
 .toc-top li a {
   display: block;
@@ -261,8 +266,15 @@ ul.toc-top {
 
 /* ScrollSpy active link style. */
 #TableOfContents li a.active {
+  display: block;
   color: $sta-primary;
   font-weight: 700;
+}
+
+#TableOfContents ul.active {
+  li a {
+    color: red !important;
+  }
 }
 
 /* Docs achnorjs links. */
